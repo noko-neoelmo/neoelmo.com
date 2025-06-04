@@ -20,8 +20,16 @@ export default function Hero() {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* AI Breakthrough Cosmic Background */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Clean Gradient Base */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-black dark:via-gray-900 dark:to-gray-800"></div>
+        {/* Inspired Gradient Base */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse at top left, #374151 0%, #1f2937 30%, #111827 60%, #0f172a 100%)',
+          }}
+        ></div>
+        
+        {/* Subtle overlay for light mode */}
+        <div className="absolute inset-0 bg-white/95 dark:bg-transparent"></div>
         
         {/* Purple Accent Elements */}
         <div className="absolute inset-0">
