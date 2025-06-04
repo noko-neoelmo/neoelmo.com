@@ -20,11 +20,11 @@ export default function Hero() {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* AI Breakthrough Cosmic Background */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Inspired Gradient Base */}
+        {/* Inspired Gradient Base matching the attached image */}
         <div 
           className="absolute inset-0"
           style={{
-            background: 'radial-gradient(ellipse at top left, #374151 0%, #1f2937 30%, #111827 60%, #0f172a 100%)',
+            background: 'linear-gradient(135deg, #4a5568 0%, #2d3748 30%, #1a202c 70%, #171923 100%)',
           }}
         ></div>
         
