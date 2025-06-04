@@ -23,8 +23,8 @@ export default function AchievementsSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">実績</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            実績
           </h2>
         </motion.div>
 
@@ -68,10 +68,10 @@ export default function AchievementsSection() {
             className="w-full h-64 object-cover rounded-2xl opacity-20 dark:opacity-10"
           />
           
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-cyan-400/20 rounded-2xl"></div>
+          <div className="absolute inset-0 bg-gray-900/80 dark:bg-gray-100/80 rounded-2xl"></div>
           
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white dark:text-black">
               {achievements.map((achievement, index) => (
                 <motion.div
                   key={achievement.title}
@@ -97,19 +97,19 @@ export default function AchievementsSection() {
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-              <h4 className="font-bold text-blue-600 mb-2">店舗AI導入</h4>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">店舗AI導入</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">チャットボット導入による顧客対応の効率化</p>
             </div>
             <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-              <h4 className="font-bold text-purple-600 mb-2">開発効率化</h4>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">開発効率化</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">Cursor活用による開発スピード向上</p>
             </div>
             <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-              <h4 className="font-bold text-cyan-600 mb-2">業務自動化</h4>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">業務自動化</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">GASを用いたワークフロー自動化</p>
             </div>
             <div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg">
-              <h4 className="font-bold text-green-600 mb-2">MA連携</h4>
+              <h4 className="font-bold text-gray-900 dark:text-white mb-2">MA連携</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300">LINE拡張ツールとMA連携による効果最大化</p>
             </div>
           </div>

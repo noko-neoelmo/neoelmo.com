@@ -8,15 +8,13 @@ export default function ServicesSection() {
       icon: Route,
       title: "シナリオメーカー",
       description: "LINE公式アカウントのステップ配信やトリガー配信を自然言語のみでつくることができるAIエージェント",
-      tags: ["CVR向上", "自動化", "簡単設定"],
-      gradient: "from-blue-600 to-cyan-400"
+      tags: ["CVR向上", "自動化", "簡単設定"]
     },
     {
       icon: Mic,
       title: "VOICER",
       description: "「自分のことばを引き出す」インタビュー〜note作成までをAIエージェントがご支援",
-      tags: ["パーソナルブランディング", "効率化"],
-      gradient: "from-purple-600 to-blue-600"
+      tags: ["パーソナルブランディング", "効率化"]
     }
   ]
 
@@ -24,32 +22,27 @@ export default function ServicesSection() {
     {
       icon: Brain,
       title: "生成AI顧問",
-      description: "1to1で最新のテック情報や活用方法をお伝えする伴走型コーチング",
-      gradient: "from-blue-600 to-cyan-400"
+      description: "1to1で最新のテック情報や活用方法をお伝えする伴走型コーチング"
     },
     {
       icon: Rocket,
       title: "新規事業グロース",
-      description: "立ち上げからグロースまでトータルプロデュース",
-      gradient: "from-purple-600 to-blue-600"
+      description: "立ち上げからグロースまでトータルプロデュース"
     },
     {
       icon: SiGoogle,
       title: "Google Workspace支援",
-      description: "GeminiやGASを活用したワークフロー自動化",
-      gradient: "from-cyan-400 to-purple-600"
+      description: "GeminiやGASを活用したワークフロー自動化"
     },
     {
       icon: SiLine,
       title: "LINEコミュニケーション",
-      description: "LINE APIを活用した顧客データ連携とパーソナライズ配信",
-      gradient: "from-blue-600 to-purple-600"
+      description: "LINE APIを活用した顧客データ連携とパーソナライズ配信"
     },
     {
       icon: Search,
       title: "LLMO/AIO支援",
-      description: "生成AIに選ばれるための構造化整備とコンテンツ設計",
-      gradient: "from-cyan-400 to-blue-600"
+      description: "生成AIに選ばれるための構造化整備とコンテンツ設計"
     }
   ]
 
@@ -68,8 +61,8 @@ export default function ServicesSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">サービス</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            サービス
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             自社サービスから伴走支援まで、包括的なソリューションを提供
@@ -96,10 +89,10 @@ export default function ServicesSection() {
                 viewport={{ once: true }}
               >
                 <div className="flex items-center mb-6">
-                  <div className={`w-12 h-12 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center mr-4 shadow-lg`}>
-                    <service.icon className="text-white w-6 h-6" />
+                  <div className="w-12 h-12 bg-gray-900 dark:bg-gray-100 rounded-xl flex items-center justify-center mr-4 shadow-lg">
+                    <service.icon className="text-white dark:text-black w-6 h-6" />
                   </div>
-                  <h4 className="text-2xl font-bold">{service.title}</h4>
+                  <h4 className="text-2xl font-bold text-gray-900 dark:text-white">{service.title}</h4>
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                   {service.description}
@@ -108,7 +101,7 @@ export default function ServicesSection() {
                   {service.tags.map((tag, tagIndex) => (
                     <span 
                       key={tagIndex}
-                      className="text-xs px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full font-semibold"
+                      className="text-xs px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full font-semibold"
                     >
                       {tag}
                     </span>
@@ -137,10 +130,10 @@ export default function ServicesSection() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <div className={`w-10 h-10 bg-gradient-to-r ${service.gradient} rounded-lg flex items-center justify-center mb-4 shadow-md`}>
-                  <service.icon className="text-white w-5 h-5" />
+                <div className="w-10 h-10 bg-gray-900 dark:bg-gray-100 rounded-lg flex items-center justify-center mb-4 shadow-md">
+                  <service.icon className="text-white dark:text-black w-5 h-5" />
                 </div>
-                <h4 className="text-lg font-bold mb-2">{service.title}</h4>
+                <h4 className="text-lg font-bold mb-2 text-gray-900 dark:text-white">{service.title}</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                   {service.description}
                 </p>
@@ -162,7 +155,7 @@ export default function ServicesSection() {
             {tools.map((tool, index) => (
               <motion.span
                 key={tool}
-                className="px-4 py-2 bg-gradient-to-r from-blue-100 to-cyan-100 dark:from-blue-900/30 dark:to-cyan-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-mono font-semibold border border-blue-200 dark:border-blue-700"
+                className="px-4 py-2 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full text-sm font-mono font-semibold border border-gray-200 dark:border-gray-700"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.4, delay: index * 0.05 }}

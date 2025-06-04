@@ -7,22 +7,19 @@ export default function DnaSection() {
       icon: Compass,
       title: "Design",
       subtitle: "強くしなやかな事業設計",
-      description: "戦略的な事業設計により、変化に強い組織とサービスを構築します",
-      gradient: "from-blue-600 to-purple-600"
+      description: "戦略的な事業設計により、変化に強い組織とサービスを構築します"
     },
     {
       icon: MessageSquare,
       title: "Narrative",
       subtitle: "コミュニティに支持されるマーケティング",
-      description: "ブランドの想いを適切に伝える、顧客との関係性を設計します",
-      gradient: "from-purple-600 to-cyan-400"
+      description: "ブランドの想いを適切に伝える、顧客との関係性を設計します"
     },
     {
       icon: Bot,
       title: "AI",
       subtitle: "成果を生み出すAI活用",
-      description: "戦略に基づいた適切なAI導入で、確実な成果を実現します",
-      gradient: "from-cyan-400 to-blue-600"
+      description: "戦略に基づいた適切なAI導入で、確実な成果を実現します"
     }
   ]
 
@@ -36,8 +33,8 @@ export default function DnaSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            新しい成長の<span className="bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">DNA</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+            新しい成長の<span className="text-gray-900 dark:text-white">DNA</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             Design・Narrative・AIの3つの柱で、強くしなやかな事業を育てます
@@ -54,10 +51,10 @@ export default function DnaSection() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <div className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-r ${item.gradient} rounded-2xl flex items-center justify-center shadow-lg`}>
-                <item.icon className="text-white w-8 h-8" />
+              <div className="w-16 h-16 mx-auto mb-6 bg-gray-900 dark:bg-gray-100 rounded-2xl flex items-center justify-center shadow-lg">
+                <item.icon className="text-white dark:text-black w-8 h-8" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">
+              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
                 {item.title}
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6 font-semibold">
