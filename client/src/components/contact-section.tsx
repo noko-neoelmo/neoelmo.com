@@ -168,7 +168,7 @@ export default function ContactSection() {
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="text-sm font-semibold">ご興味のあるサービス</FormLabel>
-                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                        <Select onValueChange={field.onChange} defaultValue={field.value || undefined}>
                           <FormControl>
                             <SelectTrigger className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:border-transparent transition-all">
                               <SelectValue placeholder="選択してください" />

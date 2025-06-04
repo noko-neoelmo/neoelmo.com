@@ -26,6 +26,9 @@ export const insertUserSchema = createInsertSchema(users).pick({
 export const insertContactSchema = createInsertSchema(contacts).omit({
   id: true,
   createdAt: true,
+}).extend({
+  company: z.string().nullable().optional(),
+  service: z.string().nullable().optional(),
 });
 
 export type InsertUser = z.infer<typeof insertUserSchema>;
