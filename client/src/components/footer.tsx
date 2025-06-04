@@ -1,4 +1,4 @@
-import logoPath from "@assets/Purple_Holizontal.png"
+import logoPath from "@assets/White_Holizontal.png"
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
             <img 
               src={logoPath} 
               alt="ネオエルモ" 
-              className="h-10 w-auto filter invert dark:invert-0"
+              className="h-10 w-auto"
             />
           </div>
           

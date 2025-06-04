@@ -16,6 +16,10 @@ export default function Navigation() {
     { href: "#contact", label: "お問い合わせ" },
   ]
 
+  const handleConsultationClick = () => {
+    window.open('https://app.spirinc.com/t/AJ_mAlkX7tM_K8hOrg35d/as/S7g17bcsUAlZTWBUJJYRZ/confirm', '_blank')
+  }
+
   const handleNavClick = (href: string) => {
     const element = document.querySelector(href)
     if (element) {
@@ -86,6 +90,12 @@ export default function Navigation() {
                       {item.label}
                     </button>
                   ))}
+                  <Button
+                    onClick={handleConsultationClick}
+                    className="w-full mt-4 bg-gray-900 dark:bg-gray-100 text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 rounded-lg font-medium transition-all duration-300"
+                  >
+                    30分の無料相談
+                  </Button>
                 </div>
               </SheetContent>
             </Sheet>

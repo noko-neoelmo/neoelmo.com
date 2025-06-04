@@ -80,8 +80,8 @@ export default function ContactSection() {
               viewport={{ once: true }}
             >
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                alt="Corporate lighthouse navigation guidance" 
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
+                alt="Modern office technology workspace" 
                 className="rounded-2xl shadow-xl w-full h-64 object-cover mb-8"
               />
               
@@ -92,7 +92,7 @@ export default function ContactSection() {
                 </div>
                 <div className="flex items-center">
                   <Mail className="text-gray-900 dark:text-gray-100 mr-3 w-5 h-5" />
-                  <span className="text-gray-700 dark:text-gray-300">contact@neoelmo.co.jp</span>
+                  <span className="text-gray-700 dark:text-gray-300">tsuchiya@neoelmo.com</span>
                 </div>
                 <div className="flex items-center">
                   <Calendar className="text-gray-900 dark:text-gray-100 mr-3 w-5 h-5" />

@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ThemeProvider } from "@/components/theme-provider";
+import LoadingScreen from "@/components/loading-screen";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
 
@@ -17,12 +19,18 @@ function Router() {
 }
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <QueryClientProvider client={queryClient}>
       <ThemeProvider defaultTheme="light" storageKey="neo-elmo-ui-theme">
         <TooltipProvider>
           <Toaster />
-          <Router />
+          {isLoading ? (
+            <LoadingScreen onComplete={() => setIsLoading(false)} />
+          ) : (
+            <Router />
+          )}
         </TooltipProvider>
       </ThemeProvider>
     </QueryClientProvider>
