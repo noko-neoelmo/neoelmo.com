@@ -20,8 +20,15 @@ export default function Hero() {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* AI Breakthrough Cosmic Background */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Purple-Greige Gradient Base */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-100 via-stone-100 to-gray-200 dark:from-purple-900 dark:via-gray-800 dark:to-gray-900"></div>
+        {/* Rock Band Style Gradient Base */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-red-950 to-purple-950 dark:from-black dark:via-red-900 dark:to-purple-900"></div>
+        
+        {/* Electric Lightning Effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-1 h-full bg-gradient-to-b from-transparent via-electric-blue to-transparent opacity-30 animate-pulse"></div>
+          <div className="absolute top-0 right-1/3 w-1 h-full bg-gradient-to-b from-transparent via-neon-pink to-transparent opacity-40 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+          <div className="absolute top-0 left-2/3 w-1 h-full bg-gradient-to-b from-transparent via-lime-400 to-transparent opacity-35 animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
         
         {/* Cosmic Energy Grid */}
         <div className="absolute inset-0">
@@ -194,17 +201,10 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <Button
-              onClick={handleScrollToServices}
-              className="px-8 py-6 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-lg font-semibold text-lg shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105 border-0"
-            >
-              限界突破サービスを見る
-            </Button>
-            <Button
               onClick={() => window.open('https://app.spirinc.com/t/AJ_mAlkX7tM_K8hOrg35d/as/S7g17bcsUAlZTWBUJJYRZ/confirm', '_blank')}
-              variant="outline"
-              className="px-8 py-6 border-2 border-purple-600 dark:border-purple-400 text-purple-600 dark:text-purple-400 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-400 dark:hover:text-black rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-6 bg-gradient-to-r from-red-600 via-purple-600 to-pink-600 hover:from-red-700 hover:via-purple-700 hover:to-pink-700 text-white rounded-lg font-bold text-lg shadow-2xl hover:shadow-red-500/25 transition-all duration-300 transform hover:scale-110 border-0 animate-pulse"
             >
-              宇宙レベル相談開始
+              30分の無料相談
             </Button>
           </motion.div>
         </div>

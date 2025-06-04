@@ -49,34 +49,22 @@ export default function CompanyInfoSection() {
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {companyInfo.map((item, index) => (
-              <motion.div
-                key={item.label}
-                className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center">
-                      <item.icon className="w-6 h-6 text-gray-700 dark:text-gray-300" />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                      {item.label}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                      {item.value}
-                    </p>
-                  </div>
+          <motion.div
+            className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <div className="space-y-6">
+              {companyInfo.map((item, index) => (
+                <div key={item.label} className="flex items-center justify-between border-b border-gray-200 dark:border-gray-600 pb-4 last:border-b-0">
+                  <span className="font-semibold text-gray-700 dark:text-gray-300">{item.label}</span>
+                  <span className="text-gray-900 dark:text-white font-medium">{item.value}</span>
                 </div>
-              </motion.div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
