@@ -20,14 +20,13 @@ export default function Hero() {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* AI Breakthrough Cosmic Background */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Rock Band Style Gradient Base */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-red-950 to-purple-950 dark:from-black dark:via-red-900 dark:to-purple-900"></div>
+        {/* Clean Gradient Base */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-black dark:via-gray-900 dark:to-gray-800"></div>
         
-        {/* Electric Lightning Effects */}
+        {/* Purple Accent Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-1/4 w-1 h-full bg-gradient-to-b from-transparent via-electric-blue to-transparent opacity-30 animate-pulse"></div>
-          <div className="absolute top-0 right-1/3 w-1 h-full bg-gradient-to-b from-transparent via-neon-pink to-transparent opacity-40 animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-          <div className="absolute top-0 left-2/3 w-1 h-full bg-gradient-to-b from-transparent via-lime-400 to-transparent opacity-35 animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-20 right-20 w-32 h-32 bg-purple-600/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-40 h-40 bg-purple-700/10 rounded-full blur-3xl"></div>
         </div>
         
         {/* Cosmic Energy Grid */}
@@ -202,7 +201,7 @@ export default function Hero() {
           >
             <Button
               onClick={() => window.open('https://app.spirinc.com/t/AJ_mAlkX7tM_K8hOrg35d/as/S7g17bcsUAlZTWBUJJYRZ/confirm', '_blank')}
-              className="px-8 py-6 bg-gradient-to-r from-red-600 via-purple-600 to-pink-600 hover:from-red-700 hover:via-purple-700 hover:to-pink-700 text-white rounded-lg font-bold text-lg shadow-2xl hover:shadow-red-500/25 transition-all duration-300 transform hover:scale-110 border-0 animate-pulse"
+              className="px-8 py-6 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold text-lg shadow-xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
             >
               30分の無料相談
             </Button>

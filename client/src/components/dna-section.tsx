@@ -54,62 +54,62 @@ export default function DnaSection() {
             transition={{ duration: 1, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <div className="relative w-96 h-96">
-              {/* Design Circle */}
+            <div className="relative w-80 h-80 mx-auto">
+              {/* Design Circle - Top */}
               <motion.div
-                className="absolute w-60 h-60 rounded-full bg-gradient-to-br from-purple-300/60 to-purple-500/60 dark:from-purple-600/60 dark:to-purple-800/60 flex items-center justify-center"
-                style={{ top: "0px", left: "20px" }}
+                className="absolute w-48 h-48 rounded-full border-4 border-purple-400 bg-purple-50/80 dark:bg-purple-900/30 flex items-center justify-center"
+                style={{ top: "0px", left: "64px" }}
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
                 viewport={{ once: true }}
               >
-                <div className="text-center text-white">
-                  <h3 className="text-xl font-bold mb-2">Design</h3>
-                  <p className="text-sm">強くしなやかな<br />事業設計</p>
+                <div className="text-center">
+                  <h3 className="text-xl font-bold mb-2 text-purple-700 dark:text-purple-300">Design</h3>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">強くしなやかな<br />事業設計</p>
                 </div>
               </motion.div>
 
-              {/* Narrative Circle */}
+              {/* Narrative Circle - Bottom Left */}
               <motion.div
-                className="absolute w-60 h-60 rounded-full bg-gradient-to-br from-indigo-300/60 to-indigo-500/60 dark:from-indigo-600/60 dark:to-indigo-800/60 flex items-center justify-center"
-                style={{ top: "80px", left: "116px" }}
+                className="absolute w-48 h-48 rounded-full border-4 border-purple-500 bg-purple-100/80 dark:bg-purple-800/30 flex items-center justify-center"
+                style={{ top: "128px", left: "0px" }}
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.8 }}
                 viewport={{ once: true }}
               >
-                <div className="text-center text-white">
-                  <h3 className="text-xl font-bold mb-2">Narrative</h3>
-                  <p className="text-sm">コミュニティに<br />支持される<br />マーケティング</p>
+                <div className="text-center">
+                  <h3 className="text-xl font-bold mb-2 text-purple-700 dark:text-purple-300">Narrative</h3>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">コミュニティに<br />支持される<br />マーケティング</p>
                 </div>
               </motion.div>
 
-              {/* AI Circle */}
+              {/* AI Circle - Bottom Right */}
               <motion.div
-                className="absolute w-60 h-60 rounded-full bg-gradient-to-br from-violet-300/60 to-violet-500/60 dark:from-violet-600/60 dark:to-violet-800/60 flex items-center justify-center"
-                style={{ top: "80px", left: "20px" }}
+                className="absolute w-48 h-48 rounded-full border-4 border-purple-600 bg-purple-200/80 dark:bg-purple-700/30 flex items-center justify-center"
+                style={{ top: "128px", left: "128px" }}
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 transition={{ duration: 0.8, delay: 1.0 }}
                 viewport={{ once: true }}
               >
-                <div className="text-center text-white">
-                  <h3 className="text-xl font-bold mb-2">AI</h3>
-                  <p className="text-sm">成果を生み出す<br />AI活用</p>
+                <div className="text-center">
+                  <h3 className="text-xl font-bold mb-2 text-purple-700 dark:text-purple-300">AI</h3>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">成果を生み出す<br />AI活用</p>
                 </div>
               </motion.div>
 
               {/* Center DNA Label */}
               <motion.div
-                className="absolute w-20 h-20 rounded-full bg-white dark:bg-gray-800 border-4 border-gray-200 dark:border-gray-600 flex items-center justify-center shadow-lg"
-                style={{ top: "138px", left: "88px" }}
+                className="absolute w-16 h-16 rounded-full bg-purple-600 flex items-center justify-center shadow-lg"
+                style={{ top: "132px", left: "96px" }}
                 initial={{ scale: 0, rotate: -180 }}
                 whileInView={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 0.8, delay: 1.2 }}
                 viewport={{ once: true }}
               >
-                <span className="text-xs font-bold text-gray-800 dark:text-gray-200">DNA</span>
+                <span className="text-xs font-bold text-white">DNA</span>
               </motion.div>
             </div>
           </motion.div>
@@ -122,16 +122,16 @@ export default function DnaSection() {
             transition={{ duration: 0.8, delay: 1.4 }}
             viewport={{ once: true }}
           >
-            <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/30 dark:to-purple-800/30 rounded-2xl">
-              <h3 className="text-2xl font-bold mb-4 text-purple-800 dark:text-purple-300">Design</h3>
+            <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 border-l-4 border-purple-500 rounded-lg">
+              <h3 className="text-2xl font-bold mb-4 text-purple-600 dark:text-purple-400">Design</h3>
               <p className="text-gray-700 dark:text-gray-300">強くしなやかな事業設計</p>
             </div>
-            <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-indigo-100 dark:from-indigo-900/30 dark:to-indigo-800/30 rounded-2xl">
-              <h3 className="text-2xl font-bold mb-4 text-indigo-800 dark:text-indigo-300">Narrative</h3>
+            <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 border-l-4 border-purple-500 rounded-lg">
+              <h3 className="text-2xl font-bold mb-4 text-purple-600 dark:text-purple-400">Narrative</h3>
               <p className="text-gray-700 dark:text-gray-300">コミュニティに支持されるマーケティング</p>
             </div>
-            <div className="text-center p-6 bg-gradient-to-br from-violet-50 to-violet-100 dark:from-violet-900/30 dark:to-violet-800/30 rounded-2xl">
-              <h3 className="text-2xl font-bold mb-4 text-violet-800 dark:text-violet-300">AI</h3>
+            <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 border-l-4 border-purple-500 rounded-lg">
+              <h3 className="text-2xl font-bold mb-4 text-purple-600 dark:text-purple-400">AI</h3>
               <p className="text-gray-700 dark:text-gray-300">成果を生み出すAI活用</p>
             </div>
           </motion.div>

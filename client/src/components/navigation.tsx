@@ -48,17 +48,14 @@ export default function Navigation() {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="hover:text-red-400 transition-colors font-bold text-white hover:glow"
-                style={{ 
-                  textShadow: '0 0 10px #ff0080'
-                }}
+                className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium text-gray-900 dark:text-gray-100"
               >
                 {item.label}
               </button>
             ))}
             <Button
               onClick={handleConsultationClick}
-              className="px-4 py-2 bg-gradient-to-r from-red-600 to-pink-600 hover:from-red-700 hover:to-pink-700 text-white rounded-lg font-bold text-sm transition-all duration-300 transform hover:scale-105 animate-pulse"
+              className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold text-sm transition-all duration-300"
             >
               {t("navigation.consultation")}
             </Button>
