@@ -1,8 +1,9 @@
 import { useState } from "react"
 import { useTheme } from "./theme-provider"
+import { useLanguage } from "@/hooks/use-language"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Moon, Sun, Menu } from "lucide-react"
+import { Moon, Sun, Menu, Globe } from "lucide-react"
 import logoPath from "@assets/Purple_Holizontal.png"
 
 export default function Navigation() {
