@@ -2,7 +2,8 @@ import { useState } from "react"
 import { useTheme } from "./theme-provider"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Moon, Sun, Menu, Flame } from "lucide-react"
+import { Moon, Sun, Menu } from "lucide-react"
+import logoPath from "@assets/Purple_Holizontal.png"
 
 export default function Navigation() {
   const { theme, setTheme } = useTheme()
@@ -24,16 +25,15 @@ export default function Navigation() {
   }
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/70 dark:bg-gray-900/70 border-b border-gray-200/20 dark:border-gray-700/20">
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/95 dark:bg-black/95 border-b border-gray-200 dark:border-gray-800">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full flex items-center justify-center shadow-lg shadow-blue-500/30">
-              <Flame className="text-white w-5 h-5" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">
-              ネオエルモ
-            </span>
+          <div className="flex items-center">
+            <img 
+              src={logoPath} 
+              alt="ネオエルモ" 
+              className="h-8 w-auto"
+            />
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
@@ -41,7 +41,7 @@ export default function Navigation() {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium"
+                className="hover:text-gray-600 dark:hover:text-gray-300 transition-colors font-medium text-gray-900 dark:text-gray-100"
               >
                 {item.label}
               </button>

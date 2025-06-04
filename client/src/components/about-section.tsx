@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import ceoImagePath from "@assets/it9prr.jpg"
 
 export default function AboutSection() {
   return (
@@ -31,12 +32,12 @@ export default function AboutSection() {
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl mb-8">
               <div className="flex items-center mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150" 
-                  alt="CEO Portrait" 
+                  src={ceoImagePath} 
+                  alt="土屋沙也加 代表取締役" 
                   className="w-16 h-16 rounded-full mr-4 object-cover"
                 />
                 <div>
-                  <h3 className="text-xl font-bold">土屋沙也加</h3>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white">土屋沙也加</h3>
                   <p className="text-gray-600 dark:text-gray-300">代表取締役</p>
                 </div>
               </div>
@@ -55,18 +56,18 @@ export default function AboutSection() {
             </div>
 
             <div className="grid grid-cols-2 gap-4 text-center">
-              <div className="bg-gradient-to-r from-blue-600/10 to-cyan-400/10 rounded-xl p-4">
-                <div className="text-2xl font-bold text-blue-600">2025年</div>
+              <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-4">
+                <div className="text-2xl font-bold text-gray-900 dark:text-white">2025年</div>
                 <div className="text-sm text-gray-600 dark:text-gray-300">設立年</div>
               </div>
-              <div className="bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-xl p-4">
-                <div className="text-2xl font-bold text-purple-600">東京</div>
+              <div className="bg-gray-100 dark:bg-gray-800 rounded-xl p-4">
+                <div className="text-2xl font-bold text-gray-900 dark:text-white">東京</div>
                 <div className="text-sm text-gray-600 dark:text-gray-300">本社所在地</div>
               </div>
             </div>
 
-            <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 rounded-xl">
-              <h4 className="font-bold text-lg mb-2">経歴</h4>
+            <div className="mt-8 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+              <h4 className="font-bold text-lg mb-2 text-gray-900 dark:text-white">経歴</h4>
               <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
                 大学在学時よりシード期のSOELU株式会社にJOINし、シリーズBまでビジネス職全般をリード。CRMと新規事業の責任者として顧客体験とコミュニケーションデザイン・事業戦略を設計。
                 LINE公式アカウントの活用でCPAを3,000円下げた経験からLINE株式会社（現LINEヤフー株式会社）の法人事業本部にて公式アカウントを活用した事業開発をPMMとして推進。
