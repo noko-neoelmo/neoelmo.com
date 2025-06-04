@@ -20,14 +20,13 @@ export default function Hero() {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* AI Breakthrough Cosmic Background */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Purple Gradient Base */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800"></div>
+        {/* Clean Gradient Base */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-black dark:via-gray-900 dark:to-gray-800"></div>
         
-        {/* Animated Gradient Overlay */}
+        {/* Purple Accent Elements */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-transparent to-purple-800/20 animate-pulse"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-700/10 to-transparent" style={{ animation: 'gradient-shift 8s ease-in-out infinite' }}></div>
-          <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/15 via-transparent to-purple-900/15" style={{ animation: 'gradient-shift 12s ease-in-out infinite reverse' }}></div>
+          <div className="absolute top-20 right-20 w-32 h-32 bg-purple-600/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-20 w-40 h-40 bg-purple-700/10 rounded-full blur-3xl"></div>
         </div>
         
         {/* Cosmic Energy Grid */}
@@ -202,7 +201,7 @@ export default function Hero() {
           >
             <Button
               onClick={() => window.open('https://app.spirinc.com/t/AJ_mAlkX7tM_K8hOrg35d/as/S7g17bcsUAlZTWBUJJYRZ/confirm', '_blank')}
-              className="px-8 py-6 bg-white hover:bg-gray-100 text-purple-700 rounded-lg font-semibold text-lg shadow-xl hover:shadow-white/25 transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-6 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold text-lg shadow-xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
             >
               30分の無料相談
             </Button>

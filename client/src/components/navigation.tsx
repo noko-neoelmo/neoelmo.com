@@ -4,7 +4,7 @@ import { useLanguage } from "@/hooks/use-language"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Moon, Sun, Menu, Globe } from "lucide-react"
-import logoPath from "@assets/White_Holizontal.png"
+import logoPath from "@assets/Purple_Holizontal.png"
 
 export default function Navigation() {
   const { theme, setTheme } = useTheme()
@@ -48,14 +48,14 @@ export default function Navigation() {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="hover:text-purple-200 transition-colors font-medium text-white"
+                className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium text-gray-900 dark:text-gray-100"
               >
                 {item.label}
               </button>
             ))}
             <Button
               onClick={handleConsultationClick}
-              className="px-4 py-2 bg-white hover:bg-gray-100 text-purple-600 rounded-lg font-semibold text-sm transition-all duration-300"
+              className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold text-sm transition-all duration-300"
             >
               {t("navigation.consultation")}
             </Button>
