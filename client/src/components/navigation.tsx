@@ -10,9 +10,10 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { href: "#about", label: "会社情報" },
+    { href: "#about", label: "代表メッセージ" },
     { href: "#services", label: "サービス" },
     { href: "#achievements", label: "実績" },
+    { href: "#company", label: "会社情報" },
     { href: "#contact", label: "お問い合わせ" },
   ]
 

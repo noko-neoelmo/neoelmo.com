@@ -18,29 +18,74 @@ export default function Hero() {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-white dark:bg-black">
-      {/* Animated Background */}
+      {/* Cosmic Background Pattern */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gray-100 dark:bg-gray-800 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gray-200 dark:bg-gray-700 rounded-full opacity-15 animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gray-50 dark:bg-gray-900 rounded-full opacity-10 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        {/* Base cosmic gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-black dark:via-gray-900 dark:to-gray-800"></div>
         
-        {/* Floating Particles */}
-        {[...Array(20)].map((_, i) => (
+        {/* Molecular/Chemical structures */}
+        <div className="absolute top-20 left-20 w-32 h-32">
+          <svg className="w-full h-full text-purple-200 dark:text-purple-900 opacity-40" viewBox="0 0 100 100">
+            <circle cx="20" cy="20" r="4" fill="currentColor" />
+            <circle cx="50" cy="30" r="6" fill="currentColor" />
+            <circle cx="80" cy="40" r="3" fill="currentColor" />
+            <circle cx="30" cy="60" r="5" fill="currentColor" />
+            <circle cx="70" cy="70" r="4" fill="currentColor" />
+            <line x1="20" y1="20" x2="50" y2="30" stroke="currentColor" strokeWidth="1" />
+            <line x1="50" y1="30" x2="80" y2="40" stroke="currentColor" strokeWidth="1" />
+            <line x1="50" y1="30" x2="30" y2="60" stroke="currentColor" strokeWidth="1" />
+            <line x1="30" y1="60" x2="70" y2="70" stroke="currentColor" strokeWidth="1" />
+          </svg>
+        </div>
+        
+        <div className="absolute top-40 right-32 w-24 h-24">
+          <svg className="w-full h-full text-gray-300 dark:text-gray-700 opacity-30" viewBox="0 0 100 100">
+            <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="none" stroke="currentColor" strokeWidth="2" />
+            <circle cx="50" cy="50" r="8" fill="currentColor" />
+          </svg>
+        </div>
+        
+        <div className="absolute bottom-32 left-40 w-28 h-28">
+          <svg className="w-full h-full text-purple-100 dark:text-purple-800 opacity-35" viewBox="0 0 100 100">
+            <circle cx="30" cy="30" r="5" fill="currentColor" />
+            <circle cx="70" cy="30" r="5" fill="currentColor" />
+            <circle cx="50" cy="70" r="5" fill="currentColor" />
+            <path d="M30 30 L70 30 L50 70 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
+          </svg>
+        </div>
+        
+        <div className="absolute top-60 right-20 w-20 h-20">
+          <svg className="w-full h-full text-gray-400 dark:text-gray-600 opacity-25" viewBox="0 0 100 100">
+            <circle cx="50" cy="20" r="3" fill="currentColor" />
+            <circle cx="20" cy="50" r="3" fill="currentColor" />
+            <circle cx="80" cy="50" r="3" fill="currentColor" />
+            <circle cx="50" cy="80" r="3" fill="currentColor" />
+            <circle cx="50" cy="50" r="6" fill="currentColor" />
+            <line x1="50" y1="20" x2="50" y2="44" stroke="currentColor" strokeWidth="1" />
+            <line x1="20" y1="50" x2="44" y2="50" stroke="currentColor" strokeWidth="1" />
+            <line x1="80" y1="50" x2="56" y2="50" stroke="currentColor" strokeWidth="1" />
+            <line x1="50" y1="80" x2="50" y2="56" stroke="currentColor" strokeWidth="1" />
+          </svg>
+        </div>
+        
+        {/* Subtle floating cosmic dust */}
+        {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-gray-400 dark:bg-gray-600 rounded-full opacity-30"
+            className="absolute w-2 h-2 bg-purple-200 dark:bg-purple-800 rounded-full opacity-20"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${20 + Math.random() * 60}%`,
+              top: `${20 + Math.random() * 60}%`,
             }}
             animate={{
-              y: [0, -30, 0],
-              opacity: [0.3, 0.7, 0.3],
+              y: [0, -15, 0],
+              x: [0, 10, 0],
+              opacity: [0.2, 0.4, 0.2],
             }}
             transition={{
-              duration: 3 + Math.random() * 2,
+              duration: 4 + Math.random() * 3,
               repeat: Infinity,
-              delay: Math.random() * 2,
+              delay: Math.random() * 3,
             }}
           />
         ))}
