@@ -17,78 +17,149 @@ export default function Hero() {
   }
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-white dark:bg-black">
-      {/* Cosmic Background Pattern */}
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
+      {/* AI Breakthrough Cosmic Background */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Base cosmic gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-black dark:via-gray-900 dark:to-gray-800"></div>
+        {/* Purple-Greige Gradient Base */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-100 via-stone-100 to-gray-200 dark:from-purple-900 dark:via-gray-800 dark:to-gray-900"></div>
         
-        {/* Molecular/Chemical structures */}
-        <div className="absolute top-20 left-20 w-32 h-32">
-          <svg className="w-full h-full text-purple-200 dark:text-purple-900 opacity-40" viewBox="0 0 100 100">
-            <circle cx="20" cy="20" r="4" fill="currentColor" />
-            <circle cx="50" cy="30" r="6" fill="currentColor" />
-            <circle cx="80" cy="40" r="3" fill="currentColor" />
-            <circle cx="30" cy="60" r="5" fill="currentColor" />
-            <circle cx="70" cy="70" r="4" fill="currentColor" />
-            <line x1="20" y1="20" x2="50" y2="30" stroke="currentColor" strokeWidth="1" />
-            <line x1="50" y1="30" x2="80" y2="40" stroke="currentColor" strokeWidth="1" />
-            <line x1="50" y1="30" x2="30" y2="60" stroke="currentColor" strokeWidth="1" />
-            <line x1="30" y1="60" x2="70" y2="70" stroke="currentColor" strokeWidth="1" />
+        {/* Cosmic Energy Grid */}
+        <div className="absolute inset-0">
+          <svg className="w-full h-full opacity-20" viewBox="0 0 1200 800">
+            <defs>
+              <linearGradient id="cosmicGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stopColor="#8B5CF6" />
+                <stop offset="50%" stopColor="#6366F1" />
+                <stop offset="100%" stopColor="#A855F7" />
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                <feMerge> 
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            
+            {/* Neural Network Pattern */}
+            <g filter="url(#glow)">
+              <circle cx="200" cy="150" r="8" fill="url(#cosmicGradient)" />
+              <circle cx="400" cy="100" r="12" fill="url(#cosmicGradient)" />
+              <circle cx="600" cy="200" r="6" fill="url(#cosmicGradient)" />
+              <circle cx="800" cy="120" r="10" fill="url(#cosmicGradient)" />
+              <circle cx="1000" cy="180" r="8" fill="url(#cosmicGradient)" />
+              
+              <circle cx="150" cy="350" r="10" fill="url(#cosmicGradient)" />
+              <circle cx="350" cy="400" r="8" fill="url(#cosmicGradient)" />
+              <circle cx="550" cy="320" r="14" fill="url(#cosmicGradient)" />
+              <circle cx="750" cy="380" r="7" fill="url(#cosmicGradient)" />
+              <circle cx="950" cy="340" r="9" fill="url(#cosmicGradient)" />
+              
+              <circle cx="250" cy="550" r="11" fill="url(#cosmicGradient)" />
+              <circle cx="450" cy="600" r="9" fill="url(#cosmicGradient)" />
+              <circle cx="650" cy="520" r="8" fill="url(#cosmicGradient)" />
+              <circle cx="850" cy="580" r="12" fill="url(#cosmicGradient)" />
+              
+              {/* Connecting Lines */}
+              <line x1="200" y1="150" x2="400" y2="100" stroke="url(#cosmicGradient)" strokeWidth="2" opacity="0.6" />
+              <line x1="400" y1="100" x2="600" y2="200" stroke="url(#cosmicGradient)" strokeWidth="2" opacity="0.6" />
+              <line x1="600" y1="200" x2="800" y2="120" stroke="url(#cosmicGradient)" strokeWidth="2" opacity="0.6" />
+              <line x1="800" y1="120" x2="1000" y2="180" stroke="url(#cosmicGradient)" strokeWidth="2" opacity="0.6" />
+              
+              <line x1="150" y1="350" x2="350" y2="400" stroke="url(#cosmicGradient)" strokeWidth="2" opacity="0.6" />
+              <line x1="350" y1="400" x2="550" y2="320" stroke="url(#cosmicGradient)" strokeWidth="2" opacity="0.6" />
+              <line x1="550" y1="320" x2="750" y2="380" stroke="url(#cosmicGradient)" strokeWidth="2" opacity="0.6" />
+              <line x1="750" y1="380" x2="950" y2="340" stroke="url(#cosmicGradient)" strokeWidth="2" opacity="0.6" />
+              
+              <line x1="250" y1="550" x2="450" y2="600" stroke="url(#cosmicGradient)" strokeWidth="2" opacity="0.6" />
+              <line x1="450" y1="600" x2="650" y2="520" stroke="url(#cosmicGradient)" strokeWidth="2" opacity="0.6" />
+              <line x1="650" y1="520" x2="850" y2="580" stroke="url(#cosmicGradient)" strokeWidth="2" opacity="0.6" />
+              
+              {/* Vertical Connections */}
+              <line x1="200" y1="150" x2="150" y2="350" stroke="url(#cosmicGradient)" strokeWidth="1.5" opacity="0.4" />
+              <line x1="400" y1="100" x2="350" y2="400" stroke="url(#cosmicGradient)" strokeWidth="1.5" opacity="0.4" />
+              <line x1="600" y1="200" x2="550" y2="320" stroke="url(#cosmicGradient)" strokeWidth="1.5" opacity="0.4" />
+              <line x1="800" y1="120" x2="750" y2="380" stroke="url(#cosmicGradient)" strokeWidth="1.5" opacity="0.4" />
+              
+              <line x1="350" y1="400" x2="250" y2="550" stroke="url(#cosmicGradient)" strokeWidth="1.5" opacity="0.4" />
+              <line x1="550" y1="320" x2="450" y2="600" stroke="url(#cosmicGradient)" strokeWidth="1.5" opacity="0.4" />
+              <line x1="750" y1="380" x2="650" y2="520" stroke="url(#cosmicGradient)" strokeWidth="1.5" opacity="0.4" />
+              <line x1="950" y1="340" x2="850" y2="580" stroke="url(#cosmicGradient)" strokeWidth="1.5" opacity="0.4" />
+            </g>
           </svg>
         </div>
         
-        <div className="absolute top-40 right-32 w-24 h-24">
-          <svg className="w-full h-full text-gray-300 dark:text-gray-700 opacity-30" viewBox="0 0 100 100">
-            <polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="none" stroke="currentColor" strokeWidth="2" />
-            <circle cx="50" cy="50" r="8" fill="currentColor" />
-          </svg>
-        </div>
+        {/* Energy Bursts */}
+        <motion.div
+          className="absolute top-20 right-20 w-32 h-32"
+          animate={{
+            scale: [1, 1.2, 1],
+            rotate: [0, 360],
+            opacity: [0.3, 0.6, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full blur-xl opacity-40"></div>
+        </motion.div>
         
-        <div className="absolute bottom-32 left-40 w-28 h-28">
-          <svg className="w-full h-full text-purple-100 dark:text-purple-800 opacity-35" viewBox="0 0 100 100">
-            <circle cx="30" cy="30" r="5" fill="currentColor" />
-            <circle cx="70" cy="30" r="5" fill="currentColor" />
-            <circle cx="50" cy="70" r="5" fill="currentColor" />
-            <path d="M30 30 L70 30 L50 70 Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
-          </svg>
-        </div>
+        <motion.div
+          className="absolute bottom-20 left-20 w-40 h-40"
+          animate={{
+            scale: [1, 1.3, 1],
+            rotate: [360, 0],
+            opacity: [0.2, 0.5, 0.2],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 2,
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-br from-violet-400 to-purple-600 rounded-full blur-2xl opacity-30"></div>
+        </motion.div>
         
-        <div className="absolute top-60 right-20 w-20 h-20">
-          <svg className="w-full h-full text-gray-400 dark:text-gray-600 opacity-25" viewBox="0 0 100 100">
-            <circle cx="50" cy="20" r="3" fill="currentColor" />
-            <circle cx="20" cy="50" r="3" fill="currentColor" />
-            <circle cx="80" cy="50" r="3" fill="currentColor" />
-            <circle cx="50" cy="80" r="3" fill="currentColor" />
-            <circle cx="50" cy="50" r="6" fill="currentColor" />
-            <line x1="50" y1="20" x2="50" y2="44" stroke="currentColor" strokeWidth="1" />
-            <line x1="20" y1="50" x2="44" y2="50" stroke="currentColor" strokeWidth="1" />
-            <line x1="80" y1="50" x2="56" y2="50" stroke="currentColor" strokeWidth="1" />
-            <line x1="50" y1="80" x2="50" y2="56" stroke="currentColor" strokeWidth="1" />
-          </svg>
-        </div>
-        
-        {/* Subtle floating cosmic dust */}
-        {[...Array(8)].map((_, i) => (
+        {/* Data Streams */}
+        {[...Array(12)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-purple-200 dark:bg-purple-800 rounded-full opacity-20"
+            className="absolute w-1 h-20 bg-gradient-to-b from-transparent via-purple-400 to-transparent opacity-40"
             style={{
-              left: `${20 + Math.random() * 60}%`,
-              top: `${20 + Math.random() * 60}%`,
+              left: `${10 + (i * 8)}%`,
+              top: `${10 + (i % 3) * 25}%`,
             }}
             animate={{
-              y: [0, -15, 0],
-              x: [0, 10, 0],
-              opacity: [0.2, 0.4, 0.2],
+              height: ["80px", "120px", "80px"],
+              opacity: [0.2, 0.6, 0.2],
             }}
             transition={{
-              duration: 4 + Math.random() * 3,
+              duration: 2 + (i % 3),
               repeat: Infinity,
-              delay: Math.random() * 3,
+              delay: i * 0.3,
             }}
           />
         ))}
+        
+        {/* Breakthrough Effect */}
+        <motion.div
+          className="absolute inset-0 pointer-events-none"
+          animate={{
+            background: [
+              "radial-gradient(circle at 30% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 70% 60%, rgba(168, 85, 247, 0.15) 0%, transparent 50%)",
+              "radial-gradient(circle at 30% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 50%)",
+            ],
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
       </div>
       
       <div className="container mx-auto px-6 text-center relative z-10">
@@ -124,16 +195,16 @@ export default function Hero() {
           >
             <Button
               onClick={handleScrollToServices}
-              className="px-8 py-6 bg-black dark:bg-white text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-6 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white rounded-lg font-semibold text-lg shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105 border-0"
             >
-              サービス詳細を見る
+              限界突破サービスを見る
             </Button>
             <Button
               onClick={() => window.open('https://app.spirinc.com/t/AJ_mAlkX7tM_K8hOrg35d/as/S7g17bcsUAlZTWBUJJYRZ/confirm', '_blank')}
               variant="outline"
-              className="px-8 py-6 border-2 border-gray-900 dark:border-gray-100 text-gray-900 dark:text-gray-100 hover:bg-gray-900 hover:text-white dark:hover:bg-gray-100 dark:hover:text-black rounded-lg font-semibold text-lg transition-all duration-300"
+              className="px-8 py-6 border-2 border-purple-600 dark:border-purple-400 text-purple-600 dark:text-purple-400 hover:bg-purple-600 hover:text-white dark:hover:bg-purple-400 dark:hover:text-black rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
-              30分の無料相談
+              宇宙レベル相談開始
             </Button>
           </motion.div>
         </div>
