@@ -20,13 +20,29 @@ export default function Hero() {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* AI Breakthrough Cosmic Background */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Clean Gradient Base */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-black dark:via-gray-900 dark:to-gray-800"></div>
+        {/* Purple Gradient Base */}
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800"></div>
         
-        {/* Purple Accent Elements */}
+        {/* Geometric Pattern Overlay */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 right-20 w-32 h-32 bg-purple-600/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 left-20 w-40 h-40 bg-purple-700/10 rounded-full blur-3xl"></div>
+          {/* Large geometric shapes */}
+          <div className="absolute top-10 right-10 w-64 h-64 border-2 border-white/20 rotate-45 rounded-lg"></div>
+          <div className="absolute bottom-20 left-10 w-48 h-48 border-2 border-gray-200/30 rotate-12 rounded-full"></div>
+          <div className="absolute top-1/3 left-1/4 w-32 h-32 border border-white/15 -rotate-12"></div>
+          
+          {/* Small accent shapes */}
+          <div className="absolute top-1/4 right-1/3 w-16 h-16 bg-white/10 rounded-full"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-12 h-12 bg-gray-200/20 rotate-45"></div>
+          <div className="absolute top-2/3 left-1/3 w-8 h-8 bg-white/15 rounded-full"></div>
+          
+          {/* Grid pattern */}
+          <div className="absolute inset-0 opacity-5">
+            <div className="grid grid-cols-12 h-full">
+              {Array.from({length: 12}).map((_, i) => (
+                <div key={i} className="border-r border-white"></div>
+              ))}
+            </div>
+          </div>
         </div>
         
         {/* Cosmic Energy Grid */}
@@ -201,7 +217,7 @@ export default function Hero() {
           >
             <Button
               onClick={() => window.open('https://app.spirinc.com/t/AJ_mAlkX7tM_K8hOrg35d/as/S7g17bcsUAlZTWBUJJYRZ/confirm', '_blank')}
-              className="px-8 py-6 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold text-lg shadow-xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105"
+              className="px-8 py-6 bg-white hover:bg-gray-100 text-purple-700 rounded-lg font-semibold text-lg shadow-xl hover:shadow-white/25 transition-all duration-300 transform hover:scale-105"
             >
               30分の無料相談
             </Button>
