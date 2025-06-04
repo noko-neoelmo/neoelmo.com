@@ -23,26 +23,11 @@ export default function Hero() {
         {/* Purple Gradient Base */}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800"></div>
         
-        {/* Geometric Pattern Overlay */}
+        {/* Animated Gradient Overlay */}
         <div className="absolute inset-0">
-          {/* Large geometric shapes */}
-          <div className="absolute top-10 right-10 w-64 h-64 border-2 border-white/20 rotate-45 rounded-lg"></div>
-          <div className="absolute bottom-20 left-10 w-48 h-48 border-2 border-gray-200/30 rotate-12 rounded-full"></div>
-          <div className="absolute top-1/3 left-1/4 w-32 h-32 border border-white/15 -rotate-12"></div>
-          
-          {/* Small accent shapes */}
-          <div className="absolute top-1/4 right-1/3 w-16 h-16 bg-white/10 rounded-full"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-12 h-12 bg-gray-200/20 rotate-45"></div>
-          <div className="absolute top-2/3 left-1/3 w-8 h-8 bg-white/15 rounded-full"></div>
-          
-          {/* Grid pattern */}
-          <div className="absolute inset-0 opacity-5">
-            <div className="grid grid-cols-12 h-full">
-              {Array.from({length: 12}).map((_, i) => (
-                <div key={i} className="border-r border-white"></div>
-              ))}
-            </div>
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-transparent to-purple-800/20 animate-pulse"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-700/10 to-transparent" style={{ animation: 'gradient-shift 8s ease-in-out infinite' }}></div>
+          <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/15 via-transparent to-purple-900/15" style={{ animation: 'gradient-shift 12s ease-in-out infinite reverse' }}></div>
         </div>
         
         {/* Cosmic Energy Grid */}
