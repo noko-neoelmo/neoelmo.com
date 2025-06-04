@@ -7,14 +7,15 @@ import logoPath from "@assets/Purple_Holizontal.png"
 
 export default function Navigation() {
   const { theme, setTheme } = useTheme()
+  const { language, setLanguage, t } = useLanguage()
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { href: "#about", label: "代表メッセージ" },
-    { href: "#services", label: "サービス" },
-    { href: "#achievements", label: "実績" },
-    { href: "#company", label: "会社情報" },
-    { href: "#contact", label: "お問い合わせ" },
+    { href: "#about", label: t("navigation.about") },
+    { href: "#services", label: t("navigation.services") },
+    { href: "#achievements", label: t("navigation.achievements") },
+    { href: "#company", label: t("navigation.company") },
+    { href: "#contact", label: t("navigation.contact") },
   ]
 
   const handleConsultationClick = () => {
@@ -55,7 +56,16 @@ export default function Navigation() {
               onClick={handleConsultationClick}
               className="px-4 py-2 bg-gray-900 dark:bg-gray-100 text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 rounded-lg font-medium text-sm transition-all duration-300"
             >
-              30分の無料相談
+              {t("navigation.consultation")}
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setLanguage(language === "ja" ? "en" : "ja")}
+              className="rounded-full"
+            >
+              <Globe className="h-5 w-5" />
+              <span className="sr-only">Toggle language</span>
             </Button>
             <Button
               variant="ghost"
@@ -101,7 +111,7 @@ export default function Navigation() {
                     onClick={handleConsultationClick}
                     className="w-full mt-4 bg-gray-900 dark:bg-gray-100 text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 rounded-lg font-medium transition-all duration-300"
                   >
-                    30分の無料相談
+                    {t("navigation.consultation")}
                   </Button>
                 </div>
               </SheetContent>

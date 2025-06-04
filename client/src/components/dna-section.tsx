@@ -1,30 +1,8 @@
 import { motion } from "framer-motion"
-import { Compass, MessageSquare, Bot } from "lucide-react"
 
 export default function DnaSection() {
-  const dnaItems = [
-    {
-      icon: Compass,
-      title: "Design",
-      subtitle: "強くしなやかな事業設計",
-      description: "戦略的な事業設計により、変化に強い組織とサービスを構築します"
-    },
-    {
-      icon: MessageSquare,
-      title: "Narrative",
-      subtitle: "コミュニティに支持されるマーケティング",
-      description: "ブランドの想いを適切に伝える、顧客との関係性を設計します"
-    },
-    {
-      icon: Bot,
-      title: "AI",
-      subtitle: "成果を生み出すAI活用",
-      description: "戦略に基づいた適切なAI導入で、確実な成果を実現します"
-    }
-  ]
-
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section className="py-20 bg-white dark:bg-black">
       <div className="container mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
@@ -34,37 +12,150 @@ export default function DnaSection() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
-            新しい成長の<span className="text-gray-900 dark:text-white">DNA</span>
+            新時代の事業に、新しい成長のDNAを
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Design・Narrative・AIの3つの柱で、強くしなやかな事業を育てます
+            事業設計からAI導入、顧客接点のデザインまで「事業のコア」を共創します。
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {dnaItems.map((item, index) => (
-            <motion.div
-              key={item.title}
-              className="bg-white dark:bg-gray-800 rounded-2xl p-8 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-16 h-16 mx-auto mb-6 bg-gray-900 dark:bg-gray-100 rounded-2xl flex items-center justify-center shadow-lg">
-                <item.icon className="text-white dark:text-black w-8 h-8" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                {item.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6 font-semibold">
-                {item.subtitle}
+        <div className="max-w-6xl mx-auto">
+          {/* Philosophy Section */}
+          <motion.div
+            className="mb-16 text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-gray-50 dark:bg-gray-900 rounded-2xl p-8 md:p-12">
+              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                <span className="font-bold text-gray-900 dark:text-white">事業を伸ばす魔法のプロンプトは存在しません。</span>
               </p>
-              <div className="text-sm text-gray-500 dark:text-gray-400">
-                {item.description}
-              </div>
-            </motion.div>
-          ))}
+              <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                高速で変化する世の中で、強い事業を育てるためにはAIの活用が不可欠です。<br />
+                しかし、ただ導入すればうまくいくわけではありません。
+              </p>
+              <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
+                体に異物が入ればアレルギーが出るように、<br />
+                ヒトも、企業文化もアップデートすることが重要です。
+              </p>
+              <p className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
+                ネオエルモが作るのは、新しい成長のDNA.
+              </p>
+            </div>
+          </motion.div>
+
+          {/* DNA Venn Diagram */}
+          <motion.div
+            className="relative flex justify-center mb-16"
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            viewport={{ once: true }}
+          >
+            <div className="relative w-96 h-96">
+              {/* Design Circle */}
+              <motion.div
+                className="absolute w-60 h-60 rounded-full bg-gradient-to-br from-purple-300/60 to-purple-500/60 dark:from-purple-600/60 dark:to-purple-800/60 flex items-center justify-center"
+                style={{ top: "0px", left: "20px" }}
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-center text-white">
+                  <h3 className="text-xl font-bold mb-2">Design</h3>
+                  <p className="text-sm">強くしなやかな<br />事業設計</p>
+                </div>
+              </motion.div>
+
+              {/* Narrative Circle */}
+              <motion.div
+                className="absolute w-60 h-60 rounded-full bg-gradient-to-br from-indigo-300/60 to-indigo-500/60 dark:from-indigo-600/60 dark:to-indigo-800/60 flex items-center justify-center"
+                style={{ top: "80px", left: "116px" }}
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-center text-white">
+                  <h3 className="text-xl font-bold mb-2">Narrative</h3>
+                  <p className="text-sm">コミュニティに<br />支持される<br />マーケティング</p>
+                </div>
+              </motion.div>
+
+              {/* AI Circle */}
+              <motion.div
+                className="absolute w-60 h-60 rounded-full bg-gradient-to-br from-violet-300/60 to-violet-500/60 dark:from-violet-600/60 dark:to-violet-800/60 flex items-center justify-center"
+                style={{ top: "80px", left: "20px" }}
+                initial={{ scale: 0 }}
+                whileInView={{ scale: 1 }}
+                transition={{ duration: 0.8, delay: 1.0 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-center text-white">
+                  <h3 className="text-xl font-bold mb-2">AI</h3>
+                  <p className="text-sm">成果を生み出す<br />AI活用</p>
+                </div>
+              </motion.div>
+
+              {/* Center DNA Label */}
+              <motion.div
+                className="absolute w-20 h-20 rounded-full bg-white dark:bg-gray-800 border-4 border-gray-200 dark:border-gray-600 flex items-center justify-center shadow-lg"
+                style={{ top: "138px", left: "88px" }}
+                initial={{ scale: 0, rotate: -180 }}
+                whileInView={{ scale: 1, rotate: 0 }}
+                transition={{ duration: 0.8, delay: 1.2 }}
+                viewport={{ once: true }}
+              >
+                <span className="text-xs font-bold text-gray-800 dark:text-gray-200">DNA</span>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* DNA Details */}
+          <motion.div
+            className="grid md:grid-cols-3 gap-8 mb-16 max-w-5xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
+            viewport={{ once: true }}
+          >
+            <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/30 dark:to-purple-800/30 rounded-2xl">
+              <h3 className="text-2xl font-bold mb-4 text-purple-800 dark:text-purple-300">Design</h3>
+              <p className="text-gray-700 dark:text-gray-300">強くしなやかな事業設計</p>
+            </div>
+            <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-indigo-100 dark:from-indigo-900/30 dark:to-indigo-800/30 rounded-2xl">
+              <h3 className="text-2xl font-bold mb-4 text-indigo-800 dark:text-indigo-300">Narrative</h3>
+              <p className="text-gray-700 dark:text-gray-300">コミュニティに支持されるマーケティング</p>
+            </div>
+            <div className="text-center p-6 bg-gradient-to-br from-violet-50 to-violet-100 dark:from-violet-900/30 dark:to-violet-800/30 rounded-2xl">
+              <h3 className="text-2xl font-bold mb-4 text-violet-800 dark:text-violet-300">AI</h3>
+              <p className="text-gray-700 dark:text-gray-300">成果を生み出すAI活用</p>
+            </div>
+          </motion.div>
+
+          {/* Bottom Message */}
+          <motion.div
+            className="text-center max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.6 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-gray-50 dark:bg-gray-900 rounded-2xl p-8 md:p-12">
+              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                磨き抜かれた戦略があってこそ、どこに、どんなAIを導入すべきかが見えてきます。
+              </p>
+              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                私たちは、事業設計からAI開発、そしてAIで結果を出す強固な組織文化まで、一気通貫でプロデュース。
+              </p>
+              <p className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
+                目まぐるしく風向きが変わるビジネスの海で、共に灯台を目指すパートナーです。
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
