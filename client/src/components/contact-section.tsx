@@ -87,16 +87,16 @@ export default function ContactSection() {
               
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <MapPin className="text-blue-600 mr-3 w-5 h-5" />
-                  <span>東京都練馬区</span>
+                  <MapPin className="text-gray-900 dark:text-gray-100 mr-3 w-5 h-5" />
+                  <span className="text-gray-700 dark:text-gray-300">東京都練馬区</span>
                 </div>
                 <div className="flex items-center">
-                  <Mail className="text-blue-600 mr-3 w-5 h-5" />
-                  <span>contact@neoelmo.co.jp</span>
+                  <Mail className="text-gray-900 dark:text-gray-100 mr-3 w-5 h-5" />
+                  <span className="text-gray-700 dark:text-gray-300">contact@neoelmo.co.jp</span>
                 </div>
                 <div className="flex items-center">
-                  <Calendar className="text-blue-600 mr-3 w-5 h-5" />
-                  <span>設立：2025年3月3日</span>
+                  <Calendar className="text-gray-900 dark:text-gray-100 mr-3 w-5 h-5" />
+                  <span className="text-gray-700 dark:text-gray-300">設立：2025年3月3日</span>
                 </div>
               </div>
             </motion.div>
@@ -170,7 +170,7 @@ export default function ContactSection() {
                         <FormLabel className="text-sm font-semibold">ご興味のあるサービス</FormLabel>
                         <Select onValueChange={field.onChange} defaultValue={field.value}>
                           <FormControl>
-                            <SelectTrigger className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all">
+                            <SelectTrigger className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:border-transparent transition-all">
                               <SelectValue placeholder="選択してください" />
                             </SelectTrigger>
                           </FormControl>
@@ -197,7 +197,7 @@ export default function ContactSection() {
                           <Textarea 
                             {...field}
                             rows={5}
-                            className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all resize-none"
+                            className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:ring-2 focus:ring-gray-900 dark:focus:ring-gray-100 focus:border-transparent transition-all resize-none"
                           />
                         </FormControl>
                         <FormMessage />
@@ -208,7 +208,7 @@ export default function ContactSection() {
                   <Button 
                     type="submit" 
                     disabled={contactMutation.isPending}
-                    className="w-full py-4 bg-gradient-to-r from-blue-600 to-cyan-400 hover:from-blue-700 hover:to-cyan-500 text-white rounded-xl font-semibold text-lg shadow-xl hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                    className="w-full py-4 bg-gray-900 dark:bg-gray-100 hover:bg-gray-800 dark:hover:bg-gray-200 text-white dark:text-black rounded-xl font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
                     {contactMutation.isPending ? "送信中..." : "送信する"}
                   </Button>
