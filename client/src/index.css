@@ -59,9 +59,9 @@
 
 @layer base {
   * {
-@apply border border-gray-300;
+    @apply border-border;
   }
-  
+
   body {
     @apply bg-background text-foreground;
     font-family: 'Noto Sans JP', 'Orbitron', sans-serif;
@@ -72,24 +72,37 @@
   .gradient-text {
     @apply text-gray-900 dark:text-white;
   }
-  
+
   .glass-effect {
     backdrop-filter: blur(20px);
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(0, 0, 0, 0.1);
   }
-  
+
   .dark .glass-effect {
     background: rgba(0, 0, 0, 0.9);
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
-  
+
   .minimal-shadow {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   }
-  
+
   .dark .minimal-shadow {
     box-shadow: 0 1px 3px rgba(255, 255, 255, 0.1);
+  }
+
+  /* 追加: tailwindが解釈できるプレーンなクラスを補助的に明示 */
+  .bg-background {
+    background-color: hsl(var(--background));
+  }
+
+  .text-foreground {
+    color: hsl(var(--foreground));
+  }
+
+  .border-border {
+    border-color: hsl(var(--border));
   }
 }
 
