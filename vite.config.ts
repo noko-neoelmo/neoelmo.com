@@ -3,20 +3,18 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
-  plugins: [
-    react(),
-  ],
+  root: "client", // ← 明示的に client フォルダをルートとする
+  plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve(import.meta.dirname, "client", "src"),
-      "@shared": path.resolve(import.meta.dirname, "shared"),
-      "@assets": path.resolve(import.meta.dirname, "attached_assets"),
+      "@": path.resolve(__dirname, "client", "src"),
+      "@shared": path.resolve(__dirname, "shared"),
+      "@assets": path.resolve(__dirname, "attached_assets"),
     },
   },
-  root: ".",
   build: {
-  outDir: "dist",
-  emptyOutDir: true,
+    outDir: "dist", // client/dist に出力される（Vercel設定に合致）
+    emptyOutDir: true,
     rollupOptions: {
       output: {
         manualChunks: {
