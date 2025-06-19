@@ -1,0 +1,10 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "vite": "^5.4.0"
+  }
+}
