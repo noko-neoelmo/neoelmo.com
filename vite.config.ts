@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
-  root: "client", // ← 明示的に client フォルダをルートとする
+  root: "client", // ルートが client ディレクトリ
   plugins: [react()],
   resolve: {
     alias: {
@@ -13,7 +13,7 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: "dist", // client/dist に出力される（Vercel設定に合致）
+    outDir: path.resolve(__dirname, "client", "dist"), // 出力先は client/dist
     emptyOutDir: true,
     rollupOptions: {
       output: {
