@@ -1,4 +1,5 @@
 import logoPath from "@assets/White_Holizontal.png"
+import { Link } from "wouter"
 
 export default function Footer() {
   return (
@@ -13,9 +14,24 @@ export default function Footer() {
             />
           </div>
           
-          <p className="text-gray-400 dark:text-gray-600 mb-4">
+          <p className="text-gray-400 dark:text-gray-600 mb-6">
             新時代の事業に、新しい成長のDNAを
           </p>
+          
+          <div className="flex justify-center space-x-8 mb-6">
+            <Link 
+              href="/privacy-policy" 
+              className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
+            >
+              プライバシーポリシー
+            </Link>
+            <Link 
+              href="/terms-of-service" 
+              className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
+            >
+              特定商取引法に基づく表記
+            </Link>
+          </div>
           
           <div className="text-sm text-gray-500 dark:text-gray-700">
             © 2025 株式会社ネオエルモ. All rights reserved.

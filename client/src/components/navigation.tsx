@@ -32,30 +32,36 @@ export default function Navigation() {
   }
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/95 dark:bg-black/95 border-b border-gray-200 dark:border-gray-800">
+    <nav className="fixed top-0 w-full z-50 bg-black/95 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <img 
-              src={logoPath} 
-              alt="ネオエルモ" 
-              className="h-8 w-auto"
-            />
+            <div className="filter brightness-0 invert">
+              <img 
+                src={logoPath} 
+                alt="ネオエルモ" 
+                className="h-7 w-auto"
+              />
+            </div>
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-12">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="hover:text-purple-600 dark:hover:text-purple-400 transition-colors font-medium text-gray-900 dark:text-gray-100"
+                className="text-sm font-light text-white hover:text-purple-400 transition-colors duration-500 relative group tracking-wide"
               >
                 {item.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-purple-400 transition-all duration-500 group-hover:w-full"></span>
               </button>
             ))}
+          </div>
+
+          <div className="hidden md:flex items-center space-x-6">
             <Button
               onClick={handleConsultationClick}
-              className="px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-semibold text-sm transition-all duration-300"
+              className="px-8 py-2 bg-white hover:bg-gray-100 text-black rounded-none font-light text-sm tracking-wider transition-all duration-500 hover:tracking-[0.1em] border-0"
             >
               {t("navigation.consultation")}
             </Button>
@@ -63,19 +69,19 @@ export default function Navigation() {
               variant="ghost"
               size="icon"
               onClick={() => setLanguage(language === "ja" ? "en" : "ja")}
-              className="rounded-full"
+              className="rounded-none text-white hover:text-purple-400 hover:bg-transparent"
             >
-              <Globe className="h-5 w-5" />
+              <Globe className="h-4 w-4" />
               <span className="sr-only">Toggle language</span>
             </Button>
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-              className="rounded-full"
+              className="rounded-none text-white hover:text-purple-400 hover:bg-transparent"
             >
-              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
             </Button>
           </div>
@@ -85,32 +91,32 @@ export default function Navigation() {
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-              className="rounded-full"
+              className="rounded-none text-white hover:text-purple-400 hover:bg-transparent"
             >
-              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <Sun className="h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
             </Button>
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="h-5 w-5" />
+                <Button variant="ghost" size="icon" className="text-white hover:text-purple-400 hover:bg-transparent rounded-none">
+                  <Menu className="h-4 w-4" />
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-64">
-                <div className="flex flex-col space-y-4 mt-8">
+              <SheetContent side="right" className="w-64 bg-black border-gray-800">
+                <div className="flex flex-col space-y-6 mt-8">
                   {navItems.map((item) => (
                     <button
                       key={item.href}
                       onClick={() => handleNavClick(item.href)}
-                      className="text-left py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                      className="text-left py-2 text-white hover:text-purple-400 transition-colors font-light tracking-wide"
                     >
                       {item.label}
                     </button>
                   ))}
                   <Button
                     onClick={handleConsultationClick}
-                    className="w-full mt-4 bg-gray-900 dark:bg-gray-100 text-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 rounded-lg font-medium transition-all duration-300"
+                    className="w-full mt-6 bg-white hover:bg-gray-100 text-black rounded-none font-light py-3 tracking-wider transition-all duration-500 border-0"
                   >
                     {t("navigation.consultation")}
                   </Button>

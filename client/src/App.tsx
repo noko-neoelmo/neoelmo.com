@@ -8,12 +8,16 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { LanguageProvider } from "@/hooks/use-language";
 import LoadingScreen from "@/components/loading-screen";
 import Home from "@/pages/home";
+import PrivacyPolicy from "@/pages/privacy-policy";
+import TermsOfService from "@/pages/terms-of-service";
 import NotFound from "@/pages/not-found";
 
 function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/privacy-policy" component={PrivacyPolicy} />
+      <Route path="/terms-of-service" component={TermsOfService} />
       <Route component={NotFound} />
     </Switch>
   );
