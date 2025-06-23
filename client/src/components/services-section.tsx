@@ -6,7 +6,7 @@ export default function ServicesSection() {
   const ownServices = [
     {
       icon: Route,
-      title: "シナリオメーカー",
+      title: "らくステップ",
       description: "LINE公式アカウントのステップ配信やトリガー配信を自然言語のみでつくることができるAIエージェント",
       tags: ["CVR向上", "自動化", "簡単設定"]
     },
@@ -27,7 +27,7 @@ export default function ServicesSection() {
     {
       icon: Rocket,
       title: "新規事業グロース",
-      description: "立ち上げからグロースまでトータルプロデュース"
+      description: "立ち上げからグロースまでトータルプロデュース。女性向け・ヘルスケア領域の実績が多いです。"
     },
     {
       icon: SiGoogle,
