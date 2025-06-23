@@ -9,8 +9,8 @@ export default function AchievementsSection() {
   ]
 
   const clients = [
-    "大丸松坂屋", "UCC", "レンガ", "SOELU", 
-    "ファンタラクティブ", "EmpaC", "KIYONO"
+    "株式会社大丸松坂屋百貨店", "UCC上島珈琲株式会社", "株式会社レンガ", "SOELU株式会社", 
+    "ファンタラクティブ株式会社","株式会社Walkers", "株式会社EmpaC", "株式会社KIYONO"
   ]
 
   return (
